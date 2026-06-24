@@ -1,0 +1,85 @@
+# Environment Variables - NEVER COMMIT THESE!
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+backend/env/
+backend/ENV/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node.js
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+backend/codepilot_ai.db
+codepilot_ai.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Build files
+dist/
+build/
+*.egg-info/
+
+# Docker
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*_backup.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# API Keys and Secrets (extra protection)
+*api_key*
+*secret*
+*password*
+credentials.*
+secrets.*
+
+# Data directories
+data/
+uploads/
