@@ -1,6 +1,6 @@
 """Code generation schemas"""
 from pydantic import BaseModel
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 
 
 class CodeGenerationRequest(BaseModel):
@@ -13,4 +13,4 @@ class CodeGenerationResponse(BaseModel):
     code: str
     language: str
     explanation: str
-    imports: list[str] = []
+    imports: List[str] = []  # Changed from list[str] for pydantic v1 compatibility

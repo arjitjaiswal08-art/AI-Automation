@@ -23,4 +23,4 @@ class ChatResponse(BaseModel):
     model: str
     
     class Config:
-        from_attributes = True
+        orm_mode = True  # Changed from from_attributes for pydantic v1

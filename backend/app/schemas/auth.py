@@ -21,7 +21,7 @@ class UserResponse(BaseModel):
     created_at: datetime
     
     class Config:
-        from_attributes = True
+        orm_mode = True  # Changed from from_attributes for pydantic v1
 
 
 class Token(BaseModel):
