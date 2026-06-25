@@ -23,4 +23,4 @@ class ProjectResponse(BaseModel):
     created_at: datetime
     
     class Config:
-        orm_mode = True  # Changed from from_attributes for pydantic v1
+        from_attributes = True  # Pydantic v2 syntax
