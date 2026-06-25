@@ -1,11 +1,12 @@
 # Ultra-stable dependencies for Render deployment
-# Using older versions with guaranteed pre-built wheels
-fastapi==0.100.0
-uvicorn==0.23.0
+# Using battle-tested versions with full compatibility
+fastapi==0.95.2
+uvicorn==0.22.0
 python-multipart==0.0.6
-sqlalchemy==2.0.20
-openai==0.28.0
+sqlalchemy==2.0.19
+openai==0.27.8
 python-dotenv==1.0.0
-# Using pydantic v1 - no Rust compilation needed!
-pydantic==1.10.13
+pydantic==1.10.12
 typing-extensions==4.7.1
+starlette==0.27.0
+anyio==3.7.1
