@@ -1,11 +1,11 @@
 """Coding Agent for code generation and editing"""
-from openai import AsyncOpenAI
+import openai
 from app.core.config import settings
 
 
 class CodingAgent:
     def __init__(self):
-        self.client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+        openai.api_key = settings.OPENAI_API_KEY
     
     async def generate_code(self, prompt: str, language: str, context: dict) -> dict:
         """Generate code from prompt"""
@@ -13,7 +13,7 @@ class CodingAgent:
         try:
             system_prompt = f"You are an expert {language} developer. Generate clean, production-ready code with comments."
             
-            response = await self.client.chat.completions.create(
+            response = await openai.ChatCompletion.acreate(
                 model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": system_prompt},
@@ -41,7 +41,7 @@ class CodingAgent:
     async def explain_code(self, code: str, language: str) -> str:
         """Explain what code does"""
         try:
-            response = await self.client.chat.completions.create(
+            response = await openai.ChatCompletion.acreate(
                 model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": "You are a code explanation expert. Explain code clearly and concisely."},
