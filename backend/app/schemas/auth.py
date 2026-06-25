@@ -1,12 +1,12 @@
 """Authentication schemas"""
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 from typing import Optional
 from datetime import datetime
 import uuid
 
 
 class UserCreate(BaseModel):
-    email: EmailStr
+    email: str  # Changed from EmailStr to str
     username: str = Field(min_length=3, max_length=50)
     password: str = Field(min_length=12)
 
