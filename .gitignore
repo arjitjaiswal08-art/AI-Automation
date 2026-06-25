@@ -4,7 +4,13 @@
 .env.*.local
 backend/.env
 frontend/.env
-*.env
+backend/.env.save
+
+# Allow these template env files (no secrets in them)
+!.env.production
+!.env.development
+!frontend/.env.production
+!frontend/.env.development
 
 # Python
 __pycache__/
