@@ -1,9 +1,12 @@
 # Minimal dependencies for Render deployment
-fastapi==0.109.0
-uvicorn==0.27.0
+# Using older, stable versions that have pre-built wheels
+fastapi==0.104.1
+uvicorn==0.24.0
 python-multipart==0.0.6
-sqlalchemy==2.0.25
-openai==1.12.0
-python-dotenv==1.0.1
-pydantic==2.6.0
-pydantic-settings==2.1.0
+sqlalchemy==2.0.23
+openai==1.3.0
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.0.3
+typing-extensions==4.8.0
+annotated-types==0.6.0
